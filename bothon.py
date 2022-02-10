@@ -2,7 +2,7 @@ from telethon import *
 
 bot_token="5076188324:AAH_LKfaC-9daC_uVouqbcdByL5oJJ72mto"
 
-bot = TelegramClient("plerlukecil111","9552817","d174b0958f3d5a591b8713199fb6950b").start(bot_token="5076188324:AAHP3OxRnZoABgg4p82TSeMvjipz9Pz3URg")
+bot = TelegramClient("@warungmaniez","9552817","d174b0958f3d5a591b8713199fb6950b").start(bot_token="5055839545:AAGM1cCGOoGMyATJfpYJYLZ__wH8PVLcCRs")
 
 
 @bot.on(events.CallbackQuery)
