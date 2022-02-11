@@ -1,8 +1,8 @@
 from telethon import *
 
-bot_token="5076188324:AAH_LKfaC-9daC_uVouqbcdByL5oJJ72mto"
+bot_token="5055839545:AAGM1cCGOoGMyATJfpYJYLZ__wH8PVLcCRs"
 
-bot = TelegramClient("@warungmaniez","9552817","d174b0958f3d5a591b8713199fb6950b").start(bot_token="5055839545:AAGM1cCGOoGMyATJfpYJYLZ__wH8PVLcCRs")
+bot = TelegramClient("run","9552817","d174b0958f3d5a591b8713199fb6950b").start(bot_token="5055839545:AAGM1cCGOoGMyATJfpYJYLZ__wH8PVLcCRs")
 
 
 @bot.on(events.CallbackQuery)
@@ -17,24 +17,24 @@ async def select_tkp(event):
 
 	if event.message.message.lower() in sup:
 		inline = [[Button.inline("Order","order2")]]		
-		msg = "Hasilnya, TKP Anda : \nSupport Ekstra Unlimited ✅ \nSupport Unlimited Max ❌ \nMasukkan /order atau tekan **tombol** dibawah untuk pembelian."
+		msg = "Hasilnya, TKP Anda :  \n \nSupport Ekstra Unlimited ✅ \nSupport Unlimited Max ❌\n   \nMasukkan /order atau tekan **tombol** dibawah untuk pembelian."
 		await event.reply(msg,buttons=inline)		
 
 	elif event.message.message.lower() in tsup:
 		inline = [[Button.inline("Order  !!","order3")]]
-		msg = "Hasilnya, TKP Anda : \nSupport Ekstra Unlimited ❌ \nSupport Unlimited Max ❌ \nTenang anda masih tetap bisa melakukan pembelian dengan /order2 atau dengan tekan **tombol** dibawah."
+		msg = "Hasilnya, TKP Anda :  \n \nSupport Ekstra Unlimited ❌ \nSupport Unlimited Max ❌ \n  \nTenang anda masih tetap bisa melakukan pembelian dengan /order2 atau dengan tekan **tombol** dibawah."
 		await event.reply(msg,buttons=inline)
 
 	elif event.message.message.lower() in supmax:
 		inline = [[Button.inline("Order","order2")]]
-		msg = "Hasilnya, TKP Anda : \nSupport Ekstra Unlimited ✅ \nSupport Unlimited Max ✅ \nMasukkan /order atau tekan **tombol** dibawah untuk pembelian untuk pembelian"
+		msg = "Hasilnya,  TKP Anda : \n  \nSupport Ekstra Unlimited ✅ \nSupport Unlimited Max ✅  \n \nMasukkan /order atau tekan **tombol** dibawah untuk pembelian untuk pembelian"
 		await event.reply(msg,buttons=inline)
 	
 	elif (
         event.message.message.lower() not in [supmax,sup,tsup]
         and not event.message.message.lower() in ["/notes","/order","/help","/start","/order2","/info"]):
 #	else:
-		await event.reply("Maaf, kata kata tidak mengerti, \nMasukkan /help untuk melihat command dan /notes untuk melihat catatan")
+		await event.reply(f"Maaf, {event.message.message} tidak mengerti,   \nMasukkan /help untuk melihat command dan /notes untuk melihat catatan")
 
 
 @bot.on(events.CallbackQuery(data=b"order3"))
@@ -48,12 +48,12 @@ async def order3(event):
 @bot.on(events.InlineQuery)
 async def order2(event):
 	inline = [[Button.url("Testi dan Pricelist","https://t.me/testimaniez/5")],[Button.url("Kontak Admin","t.me/warungmaniez")]]
-	msg = "**Silahkan chat Admin dengan tekan tombol dibawah untuk melakukan Pembelian**"
+	msg = "**Silahkan chat Admin untuk melakukan Pembelian**"
 	await event.edit(msg,buttons=inline)
 
 @bot.on(events.NewMessage(pattern="/order2$"))
-async def order2(event):
-	inline = [[Button.url("Order Disini","ttps://www.tokopedia.com/warungmaniez/perdana-telkomsel-3000gb?utm_source=salinlink&utm_medium=share&utm_campaign=PDP-124552512-2742162704-010222")],[Button.url("Kontak Admin","t.me/warungmaniez")]]
+async def order4(event):
+	inline = [[Button.url("Order Disini","https://www.tokopedia.com/warungmaniez/perdana-telkomsel-3000gb?utm_source=salinlink&utm_medium=share&utm_campaign=PDP-124552512-2742162704-010222")],[Button.url("Kontak Admin","t.me/warungmaniez")]]
 	msg = "**Silahkan chat Admin dengan tekan tombol dibawah untuk melanjutkan Pembelian**"
 	await event.reply(msg,buttons=inline)
 
@@ -66,7 +66,7 @@ async def notes(event):
 @bot.on(events.NewMessage(pattern="/order$"))
 async def order(event):
 	inline = [[Button.url("Testi dan Pricelist","https://t.me/testimaniez/5")],[Button.url("Kontak Admin","t.me/warungmaniez")]]
-	msg = "**Silahkan chat Admin dengan tekan tombol dibawah untuk melakukan Pembelian**"
+	msg = "**Silahkan chat Admin untuk melakukan Pembelian**"
 	await event.reply(msg,buttons=inline)
 
 @bot.on(events.NewMessage(pattern="/help$"))
@@ -81,7 +81,7 @@ async def start(event):
 
 @bot.on(events.NewMessage(pattern="/info$"))
 async def start(event):
-	await event.reply("**CEK TKP BOT** \n \nVersion : 2.0 \nFramework : Telethon \nDeveloper : dibuat oleh @warungmaniez dan dukungan mental oleh @xolvaid ")
+	await event.reply("\n **CEK TKP BOT** \n \nVersion : 2.0 \nFramework : Telethon \nDeveloper : dibuat oleh @warungmaniez dengan dukungan mental oleh @xolvadev ")
 
 
 bot.run_until_disconnected()
