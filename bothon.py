@@ -112,7 +112,7 @@ async def start(event):
 
 @bot.on(events.NewMessage(pattern="/list$"))
 async def start(event):
-    await event.respond('Berikut adalah list TKP secara lengkap, \n▪️ TKP dengan warna putih artinya bisa beli kuota **Eksta Unlimited** dan **Unlimited Max**, \n▪️ TKP warna Putih artinya hanya bisa beli **Ekstra Unlimited** saja, \n▪️ TKP tidak ada digambar artinya **tidak bisa** membeli kedua paket tersebut.',file="list.jpg")
+    await event.respond('Berikut adalah list TKP secara lengkap, \n▪️ TKP dengan warna **PUTIH** artinya bisa beli kuota **Eksta Unlimited** dan **Unlimited Max**, \n▪️ TKP warna **KUNING** artinya hanya bisa beli **Ekstra Unlimited** saja, \n▪️ TKP tidak ada digambar artinya **tidak bisa** membeli kedua paket tersebut.',file="list.jpg")
 
 
 bot.run_until_disconnected()
