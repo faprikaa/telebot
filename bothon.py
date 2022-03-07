@@ -99,20 +99,20 @@ async def order(event):
 @bot.on(events.NewMessage(pattern="/help$"))
 async def help(event):
 	inline = [[Button.url("Admin","t.me/warungmaniez")]]
-	msg = "**help** : \n \n/start untuk memulai \n/order untuk pembelian \n/order2 untuk melakukan pembelian kartu perdana \n/note untuk melihat notes \n/list untuk melihat list TKP \n/help untuk melihat commnad \n/info untuk melihat informasi tentang bot"
+	msg = "**help** : \n \n/start untuk memulai \n/order untuk pembelian \n/order2 untuk melakukan pembelian kartu perdana \n/notes untuk melihat notes \n/list untuk melihat list TKP \n/help untuk melihat commnad \n/info untuk melihat informasi tentang bot"
 	await event.reply(msg,buttons=inline)
 
 @bot.on(events.NewMessage(pattern="/start$"))
 async def start(event):
-	await event.reply("Selamat datang di CEK TKP BOT \nUntuk memulai, \nSilahkan masukkan kabupaten")
+	await event.reply("Selamat datang di CEK TKP BOT \n**Harap membaca /notes terlebih dahulu !!** \n \n======================== \nUntuk memulai, \nSilahkan masukkan kabupaten \n========================")
 
 @bot.on(events.NewMessage(pattern="/info$"))
 async def start(event):
-	await event.reply("\n **CEK TKP BOT** \n \nVersion : 3.0 \nFramework : Telethon \nDeveloper : dibuat oleh @warungmaniez dengan dukungan mental oleh @xolvadev ")
+	await event.reply("\n **CEK TKP BOT** \n \nVersion : 3.4 \nFramework : Telethon \nDeveloper : dibuat oleh @warungmaniez dengan dukungan mental oleh @xolvadev ")
 
 @bot.on(events.NewMessage(pattern="/list$"))
 async def start(event):
-    await event.respond('Berikut adalah list TKP secara lengkap, \n▪️ TKP dengan warna **PUTIH** artinya bisa beli kuota **Eksta Unlimited** dan **Unlimited Max**, \n▪️ TKP warna **KUNING** artinya hanya bisa beli **Ekstra Unlimited** saja, \n▪️ TKP tidak ada digambar artinya **tidak bisa** membeli kedua paket tersebut.',file="list.jpg")
+    await event.respond('Berikut adalah list TKP secara lengkap, \n▪️ TKP dengan warna **PUTIH** artinya hanya bisa beli kuota **Eksta Unlimited** saja, \n▪️ TKP warna **KUNING** artinya bisa beli **Ekstra Unlimited** dan **Unlimited Max**, \n▪️ TKP tidak ada digambar artinya **tidak bisa** membeli kedua paket tersebut.',file="list.jpg")
 
 
 bot.run_until_disconnected()
