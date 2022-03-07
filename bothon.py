@@ -67,7 +67,7 @@ async def select_tkp(event):
 @bot.on(events.CallbackQuery(data=b"order3"))
 @bot.on(events.InlineQuery)
 async def order3(event):
-	inline = [[Button.url("Order 1 Bulan","https://www.tokopedia.com/warungmaniez/perdana-telkomsel-3000gb")]],[[Button.url("Order 4 Bulan","https://www.tokopedia.com/warungmaniez/perdana-telkomsel-3000gb-120hari")]]
+	inline = [[Button.url("Order 1 Bulan","https://www.tokopedia.com/warungmaniez/perdana-telkomsel-3000gb")],[Button.url("Order 4 Bulan","https://www.tokopedia.com/warungmaniez/perdana-telkomsel-3000gb-120hari")]]
 	msg = "**Silahkan tekan tombol dibawah untuk melakukan Pembelian**"
 	await event.edit(msg,buttons=inline)
 
@@ -80,7 +80,7 @@ async def order2(event):
 
 @bot.on(events.NewMessage(pattern="/order2$"))
 async def order4(event):
-	inline = [[Button.url("Order Disini","https://www.tokopedia.com/warungmaniez/perdana-telkomsel-3000gb?utm_source=salinlink&utm_medium=share&utm_campaign=PDP-124552512-2742162704-010222")],[Button.url("Kontak Admin","t.me/warungmaniez")]]
+	inline = [[Button.url("Order 1 Bulan","https://www.tokopedia.com/warungmaniez/perdana-telkomsel-3000gb?utm_source=salinlink&utm_medium=share&utm_campaign=PDP-124552512-2742162704-010222")],[Button.url("Order 4 Bulan","https://www.tokopedia.com/warungmaniez/perdana-telkomsel-3000gb-120hari")],[Button.url("Kontak Admin","t.me/warungmaniez")]]
 	msg = "**Silahkan chat Admin dengan tekan tombol dibawah untuk melanjutkan Pembelian**"
 	await event.reply(msg,buttons=inline)
 
