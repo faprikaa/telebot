@@ -108,7 +108,7 @@ async def start(event):
 
 @bot.on(events.NewMessage(pattern="/info$"))
 async def start(event):
-	await event.reply("\n **CEK TKP BOT** \n \nVersion : 3.4 \nFramework : Telethon \nDeveloper : dibuat oleh @warungmaniez dengan dukungan mental oleh @xolvadev ")
+	await event.reply("\n **CEK TKP BOT** \n \nVersion : 3.5 \nFramework : Telethon \nDeveloper : dibuat oleh @warungmaniez dengan dukungan mental oleh @xolvadev ")
 
 @bot.on(events.NewMessage(pattern="/list$"))
 async def start(event):
