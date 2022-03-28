@@ -3,7 +3,7 @@ from telethon import *
 
 bot_token="5055839545:AAGM1cCGOoGMyATJfpYJYLZ__wH8PVLcCRs"
 
-bot = TelegramClient("run","9552817","d174b0958f3d5a591b8713199fb6950b").start(bot_token="5055839545:AAEoMHSYWHBUL3wwVUYoBi4mOWz4KiJGnj8")
+bot = TelegramClient("run","9552817","d174b0958f3d5a591b8713199fb6950b").start(bot_token="5055839545:AAFz80AyHAstgzdc6yGg1WdOiPU6Mir1jlg")
 
 
 @bot.on(events.CallbackQuery)
@@ -40,17 +40,17 @@ async def select_tkp(event):
 
 	elif event.message.message.lower() in sup:
 		inline = [[Button.inline("Order","order2")]]		
-		msg = "Hasilnya, TKP Anda '''{event.message.message}''', :  \n \nSupport Ekstra Unlimited ✅ \nSupport Unlimited Max ❌\n   \nMasukkan /order atau tekan **tombol** dibawah untuk pembelian."
+		msg = f"Hasilnya, TKP Anda ```{event.message.message}```, :  \n \nSupport Ekstra Unlimited ✅ \nSupport Unlimited Max ❌\n   \nMasukkan /order atau tekan **tombol** dibawah untuk pembelian."
 		await event.reply(msg,buttons=inline)		
 
 	elif event.message.message.lower() in supmax:
 		inline = [[Button.inline("Order","order2")]]
-		msg = "Hasilnya,  TKP Anda '''{event.message.message}''', : \n  \nSupport Ekstra Unlimited ✅ \nSupport Unlimited Max ✅  \n \nMasukkan /order atau tekan **tombol** dibawah untuk pembelian untuk pembelian"
+		msg = f"Hasilnya,  TKP Anda ```{event.message.message}```, : \n  \nSupport Ekstra Unlimited ✅ \nSupport Unlimited Max ✅  \n \nMasukkan /order atau tekan **tombol** dibawah untuk pembelian untuk pembelian"
 		await event.reply(msg,buttons=inline)
 
 	elif event.message.message.lower() in tsup:
 		inline = [[Button.inline("Order  !!","order3")]]
-		msg = "Hasilnya, TKP Anda '''{event.message.message}''', :  \n \nSupport Ekstra Unlimited ❌ \nSupport Unlimited Max ❌ \n  \nTenang anda masih tetap bisa melakukan pembelian dengan /order2 atau dengan tekan **tombol** dibawah."
+		msg = f"Hasilnya, TKP Anda ```{event.message.message}```, :  \n \nSupport Ekstra Unlimited ❌ \nSupport Unlimited Max ❌ \n  \nTenang anda masih tetap bisa melakukan pembelian dengan /order2 atau dengan tekan **tombol** dibawah."
 		await event.reply(msg,buttons=inline)
 		
 	elif event.message.message.lower() in harsh:
@@ -61,7 +61,7 @@ async def select_tkp(event):
         and not event.message.message.lower() in ["/notes","/order","/help","/start","/order2","/info","/list"]):
 	
 #	else:
-		await event.reply(f"Maaf, __{event.message.message}___ tidak mengerti,   \nMasukkan /help untuk melihat command dan /notes untuk melihat catatan")
+		await event.reply(f"Maaf, __{event.message.message}__ tidak mengerti,   \nMasukkan /help untuk melihat command dan /notes untuk melihat catatan")
 
 
 @bot.on(events.CallbackQuery(data=b"order3"))
