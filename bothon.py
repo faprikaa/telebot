@@ -1,9 +1,9 @@
 from cgi import test
 from telethon import *
 
-bot_token="5055839545:AAGM1cCGOoGMyATJfpYJYLZ__wH8PVLcCRs"
+bot_token="5055839545:xxxxxxx"
 
-bot = TelegramClient("run","9552817","d174b0958f3d5a591b8713199fb6950b").start(bot_token="5055839545:AAFz80AyHAstgzdc6yGg1WdOiPU6Mir1jlg")
+bot = TelegramClient("run","555555","xxxxxxxxxxxxxxxxx").start(bot_token="5055839545:xxxxxxxxxxxxxxxxx")
 
 
 @bot.on(events.CallbackQuery)
