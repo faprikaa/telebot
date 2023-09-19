@@ -51,7 +51,7 @@ def handle_message(update, context):
 	update.message.reply_text(response)
 
 def main():
-	updater = Updater('5055839545:AAGM1cCGOoGMyATJfpYJYLZ__wH8PVLcCRs', use_context=True)
+	updater = Updater('5055839545:xxxxxxxxxxxxxxxxxxxx', use_context=True)
 	dp = updater.dispatcher
 
 	dp.add_handler(CommandHandler("start", start_dong))
